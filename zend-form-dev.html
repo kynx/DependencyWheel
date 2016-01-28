@@ -83,17 +83,6 @@ form .btn-primary {
     });
   });
 
-  document.getElementById('composerRedraw').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var composerjson = JSON.parse(document.getElementById('composerJson').value);
-    var composerlock = JSON.parse(document.getElementById('composerLock').value);
-    var data = buildMatrixFromComposerJsonAndLock(composerjson, composerlock, true);
-    d3.select('#chart_placeholder svg').remove();
-    d3.select('#chart_placeholder')
-      .datum(data)
-      .call(chart);
-  }, false);
-
 </script>
 <script type="text/javascript">
 
